@@ -32,8 +32,19 @@ def divider(input_num):
         num /= 10
         divider(num)
     else:
+        # return str(num)
+        # В результате выполнения возвращается тип, который не может быть обработан,
+        # как строка несмотря на явное приведение к типу str
+
+
         rev_num = str(num)[::-1]
         print(rev_num)
 
 
-divider("1200")
+# def reverse(data):
+#     rev_num = str(data)[::-1]
+#     print(rev_num)
+
+
+var = divider("1200")
+# reverse(var)
