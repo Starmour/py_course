@@ -22,3 +22,23 @@ print('Задача 1. Урок информатики 2')
 #
 # Введите число: 0.0012
 # Формат плавающей точки: x = 1.2 * 10 ** -3
+
+
+def divider(num):
+    deg = 0
+    while num >= 10:
+        deg += 1
+        num = num / 10
+    while num < 1:
+        deg -= 1
+        num = num * 10
+
+    print(f"Формат плавающей точки: x = {num} * 10 ** {deg}")
+
+
+while True:
+    int_number = float(input("Please, enter the positive number:\n>"))
+    if float(int_number) > 0 :
+        divider(int_number)
+    else:
+        print("Please enter the correct number!")
