@@ -23,3 +23,15 @@ print('Задача 5. Маятник ')
 # Введите амплитуду остановки: 0.1
 
 # Маятник считается остановившимся через 27 колебаний
+while True:
+    max_amp = float(input("Input the maximum amplitude \n>"))
+    min_amp = float(input("Input the minimum amplitude \n>"))
+    count = 0
+    while max_amp > min_amp:
+        count += 1
+        print(f"{count}. {max_amp}")
+        max_amp *= 0.916
+
+    print(f"Pendulum will stop in {count} swings")
+
+

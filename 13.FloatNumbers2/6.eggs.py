@@ -1,5 +1,6 @@
 print('Задача 6. Яйца')
 
+
 # В рамках программы колонизации Марса
 # компания «Спейс Инжиниринг» вывела особую породу черепах,
 # которые, по задумке, должны размножаться, откладывая яйца в марсианском грунте.
@@ -29,3 +30,24 @@ print('Задача 6. Яйца')
 # Введите максимально допустимый уровень опасности: 0.01
 #
 # Приблизительная глубина безопасной кладки: 0.732421875 м
+
+
+def find_dangerous_degree(x):
+    dd = x ** 3 - 3 * x ** 2 - 12 * x + 10
+    print(f"The dangerous' degree is {dd} units")
+    return dd
+
+
+
+def find_safety_deep(dd):
+    # dd = x ** 3 - 3 * x ** 2 - 12 * x + 10
+    # x^3 - 3x^2 - 12x = dd - 10
+    # x(x^2 - 3x - 12) = dd - 10
+    # x(x^2 - 6x + 3x - 12) = dd - 10
+    # x(x(x - 6) + 3(x - 4) = dd - 10
+    return 0
+
+
+while True:
+    deep = float(input("Please, enter the level of deep \n>"))
+    find_dangerous_degree(deep)

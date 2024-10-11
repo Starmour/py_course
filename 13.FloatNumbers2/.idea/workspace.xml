@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c296272c-cc00-466f-a735-cb2b5524faec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.info_lesson.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.info_lesson.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2.max_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/2.max_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.reverse_num_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/3.reverse_num_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.imperfection_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/4.imperfection_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.pendulum.py" beforeDir="false" afterPath="$PROJECT_DIR$/5.pendulum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.eggs.py" beforeDir="false" afterPath="$PROJECT_DIR$/6.eggs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +32,15 @@
   "keyToString": {
     "Python.0.precision.executor": "Run",
     "Python.1.info_lesson.executor": "Run",
+    "Python.2.max_func.executor": "Run",
+    "Python.3.reverse_num_2.executor": "Run",
+    "Python.4.imperfection_2.executor": "Run",
+    "Python.5.pendulum.executor": "Run",
+    "Python.6.eggs.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="SharedIndexes">

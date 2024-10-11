@@ -1,3 +1,5 @@
+import math
+
 print('Задача 1. Урок информатики 2')
 
 
@@ -28,7 +30,7 @@ def divider(num):
     deg = 0
     while num >= 10:
         deg += 1
-        num = num / 10
+        num = round(num / 10, deg)
     while num < 1:
         deg -= 1
         num = num * 10
@@ -38,7 +40,7 @@ def divider(num):
 
 while True:
     int_number = float(input("Please, enter the positive number:\n>"))
-    if float(int_number) > 0 :
+    if float(int_number) > 0:
         divider(int_number)
     else:
         print("Please enter the correct number!")
