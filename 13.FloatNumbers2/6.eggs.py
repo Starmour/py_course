@@ -32,22 +32,29 @@ print('Задача 6. Яйца')
 # Приблизительная глубина безопасной кладки: 0.732421875 м
 
 
-def find_dangerous_degree(x):
-    dd = x ** 3 - 3 * x ** 2 - 12 * x + 10
-    print(f"The dangerous' degree is {dd} units")
-    return dd
+def find_safety_depth(user_danger_level):
+    lower = 0
+    upper = 4
 
+    while True:
+        mid = (lower + upper) / 2
+        danger_level = mid ** 3 - 3 * mid ** 2 - 12 * mid + 10
+        if abs(danger_level) < user_danger_level:
+            return mid
 
-
-def find_safety_deep(dd):
-    # dd = x ** 3 - 3 * x ** 2 - 12 * x + 10
-    # x^3 - 3x^2 - 12x = dd - 10
-    # x(x^2 - 3x - 12) = dd - 10
-    # x(x^2 - 6x + 3x - 12) = dd - 10
-    # x(x(x - 6) + 3(x - 4) = dd - 10
-    return 0
+        if danger_level > 0:
+            lower = mid
+        else:
+            upper = mid
 
 
 while True:
-    deep = float(input("Please, enter the level of deep \n>"))
-    find_dangerous_degree(deep)
+    # deep = float(input("Please, enter the level of deep \n>"))
+    # find_dangerous_degree(deep)
+
+    max_danger = float(input("Input the max danger level:\n>"))
+    if max_danger < 0:
+        print("Please, enter correct data:")
+    else:
+        result = find_safety_depth(max_danger)
+        print(result)
