@@ -1,5 +1,4 @@
 # Подключаем библиотеку
-import atexit
 import os
 from datetime import datetime
 
@@ -116,10 +115,17 @@ def welcome(message):
 
     if message.text == "📰Полезные статьи":
         log_2_xlsx(message)
+
+        bot.send_message(message.from_user.id, "Полезная статья \"Списки в Python\"\n"
+                                               "https: // drive.google.com / file / d / 1XJyrBtQ4ZPbBlrpOs2twA0X4D1jN33FF / view")
         bot.send_message(message.from_user.id, "Полезная статья по созданию клавиатуры бота\n"
                                                "https://surik00.gitbooks.io/aiogram-lessons/content/chapter5.html")
         bot.send_message(message.from_user.id, "Полезная статья по работе с Json-файлами\n"
                                                "https://pythonist.ru/chtenie-i-zapis-v-fajl-json-obekta/")
+        bot.send_message(message.from_user.id, "Как составить эффекитвное резюме\n"
+                                               "https: // drive.google.com / file / d / 1uo763kscWwheM4jhV - q4Demz - h5r - cv3 / view")
+
+
 
 
 def transform_image(filename, brightness):
@@ -209,21 +215,25 @@ def transcript(message):
 # Запускаем бота. Он будет работать до тех пор, пока работает ячейка (крутится значок слева).
 # Остановим ячейку - остановится бот
 def get_articles(message):
-    log_2_xlsx(message)
-    web_page = requests.get('https://centersi.spb.ru/art/')
-    soup = BeautifulSoup(web_page.text, 'html.parser')
-    items = soup.find_all(class_='item')
-    # INLINE BUTTONS IN MESSAGE
-    articles = []
-    ids = []
-    for elem in items:
-        title = elem.find(class_='item-name').text
-        articles.append(title[:30])
-        art_id = elem.attrs['id']
-        ids.append(art_id)
-    print(articles)
-    kb = Keyboa(articles).keyboard
-    bot.send_message(message.from_user.id, "Статьи с сайта https://centersi.spb.ru/art/", reply_markup=kb)
+    try:
+        log_2_xlsx(message)
+        web_page = requests.get('https://centersi.spb.ru/art/')
+        soup = BeautifulSoup(web_page.text, 'html.parser')
+        items = soup.find_all(class_='item')
+        # INLINE BUTTONS IN MESSAGE
+        articles = []
+        ids = []
+        for elem in items:
+            title = elem.find(class_='item-name').text
+            articles.append(title[:30])
+            art_id = elem.attrs['id']
+            ids.append(art_id)
+        print(articles)
+        kb = Keyboa(articles).keyboard
+        bot.send_message(message.from_user.id, "Статьи с сайта https://centersi.spb.ru/art/", reply_markup=kb)
+
+    except Exception:
+        print("Exception")
 
 
 bot.polling()
